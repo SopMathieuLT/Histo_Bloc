@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Liste horizontale</title>
+<title>Liste horizontale responsive</title>
 
 <style>
   body {
@@ -13,23 +13,23 @@
 
   .list-container {
     display: flex;
-    flex-direction: columm;
+    flex-direction: row;    /* horizontal */
     gap: 5px;
     padding: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow-x: auto;       /* défilement si trop large */
   }
 
   .item {
-    flex: 0 0 auto;
-    padding: 12px 20px;
+    flex: 1 1 0;            /* prend largeur égale pour toutes les cases */
+    padding: 8px 0;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     text-align: center;
     cursor: default;
-    min-width: 60px;
+    min-width: 60px;        /* largeur minimale */
+    box-sizing: border-box;
   }
 </style>
 </head>
