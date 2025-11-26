@@ -13,32 +13,31 @@
 
   .list-container {
     display: flex;
-    flex-direction: row;   /* horizontal */
+    flex-direction: row;       /* horizontal */
     gap: 5px;
-    padding: 5px;
-    width: 100%;
+    padding: 10px;
+    width: 100%;               /* prend toute la largeur du conteneur */
     box-sizing: border-box;
   }
 
   .item {
-    flex: 1 1 0;           /* largeur flexible */
-    border-radius: 10px;   /* coins arrondis */
+    flex: 1 1 0;               /* chaque boîte prend largeur égale automatiquement */
+    padding: 12px 0;
+    border-radius: 10px;       /* coins arrondis */
     font-size: 12px;
     font-weight: bold;
     color: white;
     text-align: center;
     cursor: default;
-    min-width: 10px;       /* largeur minimale */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
+    min-width: 10px;           /* largeur minimale si le conteneur devient très petit */
   }
 </style>
 </head>
 
 <body>
 
-<div class="list-container" id="listContainer">
+<div class="list-container">
   <div class="item" style="background:#000000;">A</div>
   <div class="item" style="background:#878F9C;">1</div>
   <div class="item" style="background:#A5AEBB;">2</div>
@@ -54,21 +53,6 @@
   <div class="item" style="background:#700000;">12</div>
   <div class="item" style="background:#590600;">13 +</div>
 </div>
-
-<script>
-  function resizeItems() {
-    const container = document.getElementById('listContainer');
-    const height = container.clientHeight; // hauteur disponible
-    const items = container.getElementsByClassName('item');
-    for (let i = 0; i < items.length; i++) {
-      items[i].style.height = height + 'px'; // applique la hauteur
-    }
-  }
-
-  // ajuste la hauteur au chargement et au redimensionnement
-  window.addEventListener('load', resizeItems);
-  window.addEventListener('resize', resizeItems);
-</script>
 
 </body>
 </html>
