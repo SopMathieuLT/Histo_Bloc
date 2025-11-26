@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Liste horizontale</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .item {
+    flex: 0 0 auto;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    cursor: default;
+    min-width: 60px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="list-container">
+  <div class="item" style="background:#656D78;">1</div>
+  <div class="item" style="background:#87909D;">2</div>
+  <div class="item" style="background:#9BA4B1;">3</div>
+  <div class="item" style="background:#A5AEBC;">4</div>
+  <div class="item" style="background:#C5C5CC;">5</div>
+  <div class="item" style="background:#DDD5D7;">6</div>
+  <div class="item" style="background:#EDDEDD; color:#111;">7</div>
+  <div class="item" style="background:#E9CCCA; color:#111;">8</div>
+  <div class="item" style="background:#E2B5B2; color:#111;">9</div>
+  <div class="item" style="background:#D9908A;">10</div>
+  <div class="item" style="background:#CF6D67;">11</div>
+  <div class="item" style="background:#D1463C;">12</div>
+  <div class="item" style="background:#B91408;">13</div>
+</div>
+
+</body>
+</html>
