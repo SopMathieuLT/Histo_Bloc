@@ -13,23 +13,24 @@
 
   .list-container {
     display: flex;
-    flex-direction: row;    /* horizontal */
+    flex-direction: row;       /* horizontal */
     gap: 5px;
     padding: 10px;
-    overflow-x: auto;       /* défilement si trop large */
+    width: 100%;               /* prend toute la largeur du conteneur */
+    box-sizing: border-box;
   }
 
   .item {
-    flex: 1 1 0;            /* prend largeur égale pour toutes les cases */
-    padding: 8px 0;
-    border-radius: 10px;
-    font-size: 14px;
+    flex: 1 1 0;               /* chaque boîte prend largeur égale automatiquement */
+    padding: 10px 0;
+    border-radius: 10px;       /* coins arrondis */
+    font-size: 12px;
     font-weight: bold;
     color: white;
     text-align: center;
     cursor: default;
-    min-width: 60px;        /* largeur minimale */
     box-sizing: border-box;
+    min-width: 10px;           /* largeur minimale si le conteneur devient très petit */
   }
 </style>
 </head>
